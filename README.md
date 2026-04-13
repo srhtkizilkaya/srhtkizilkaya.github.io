@@ -1,6 +1,6 @@
 # srhtkizilkaya.github.io
-2000iqtzo, 
+2000 IQ ! - Tricky Puzzles, 
 
 Nut Out! - Screw Puzzle
 
-support: srhtkizilkaya@gmail.com
+support: fourtypolesstudio@gmail.com
