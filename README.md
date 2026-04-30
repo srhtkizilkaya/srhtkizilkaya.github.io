@@ -5,6 +5,6 @@ Nut Out! - Screw Puzzle,
 
 Stickman: Going Home
 
-Piramidka - Size & Color Sort
+Pyramidka: Ring Stack Puzzle
 
 support: fourtypolesstudio@gmail.com
