@@ -174,6 +174,9 @@ nav {
   margin: 60px auto;
   padding: 0 20px 80px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-page .back-link {
@@ -185,6 +188,7 @@ nav {
   font-size: 0.9rem;
   margin-bottom: 40px;
   transition: color 0.2s;
+  align-self: flex-start;
 }
 
 .game-page .back-link:hover { color: var(--text); }
@@ -194,7 +198,8 @@ nav {
   height: 120px;
   border-radius: 26px;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  display: block;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
@@ -310,6 +315,87 @@ nav {
 }
 
 .email-btn:hover { opacity: 0.85; }
+
+/* PRIVACY PAGE */
+.privacy-page {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px 80px;
+}
+
+.privacy-page h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.last-updated {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 28px;
+}
+
+.intro {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+.policy-section {
+  margin-bottom: 36px;
+}
+
+.policy-section h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--accent2);
+}
+
+.policy-section p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.policy-section ul {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+}
+
+.service-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.service-desc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.service-link {
+  color: var(--accent2);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.service-link:hover { text-decoration: underline; }
 
 /* FOOTER */
 footer {
