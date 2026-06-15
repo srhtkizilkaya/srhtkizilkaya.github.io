@@ -20,10 +20,10 @@
 body {
   background-color: var(--bg);
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.13) 1.8px, transparent 1.8px),
-    radial-gradient(circle, rgba(255,255,255,0.13) 0.8px, transparent 0.8px),
-    radial-gradient(circle, rgba(255,255,255,0.13) 1.8px, transparent 1.8px),
-    radial-gradient(circle, rgba(255,255,255,0.13) 0.8px, transparent 0.8px);
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 0.8px, transparent 0.8px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 0.8px, transparent 0.8px);
   background-size: 24px 40px, 24px 40px, 24px 40px, 24px 40px;
   background-position: 0 0, 12px 0, 12px 20px, 0 20px;
   color: var(--text);
