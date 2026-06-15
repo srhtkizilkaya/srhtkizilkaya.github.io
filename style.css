@@ -248,15 +248,24 @@ nav {
 .game-page .back-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   margin-bottom: 40px;
-  transition: color 0.2s;
+  padding: 10px 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
-.game-page .back-link:hover { color: var(--text); }
+.game-page .back-link:hover {
+  color: var(--text);
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.08);
+}
 
 .game-icon {
   width: 120px;
