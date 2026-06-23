@@ -293,6 +293,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 280px;
 }
 
 .store-btn {
@@ -308,6 +309,15 @@ nav {
   transition: transform 0.15s, opacity 0.15s;
   border: none;
   cursor: pointer;
+}
+
+.store-btn svg,
+.store-btn img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
 }
 
 .store-btn:hover {
