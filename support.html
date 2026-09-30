@@ -4,65 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support — srhtkizilkaya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-  <a class="nav-brand" href="index.html">srhtkizilkaya</a>
+  <a class="nav-brand" href="index.html">
+    <span class="brand-name">srht<span class="brand-accent">kizilkaya</span></span>
+    <span class="nav-sub">Games &amp; Apps</span>
+  </a>
   <ul class="nav-links">
-    <li><a href="index.html">Games</a></li>
-    <li><a href="support.html">Support</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#games">Games</a></li>
+    <li><a href="index.html#apps">Apps</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
   </ul>
+  <a class="nav-contact-btn" href="support.html">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    Contact
+  </a>
 </nav>
 
-<div class="support-page" style="margin-top: 60px;">
-  <h1>Support</h1>
-  <p class="sub">Having an issue? I'm happy to help.</p>
+<div class="support-page">
 
-  <div class="support-card">
-    <h3>Contact via Email</h3>
-    <p>You can reach me directly for bug reports, suggestions, or any other questions. I usually respond within 1–2 days.</p>
-    <a class="email-btn" href="mailto:fourtypolesstudio@gmail.com">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      fourtypolesstudio@gmail.com
-    </a>
+  <div class="page-header">
+    <h1>Support</h1>
+    <p class="page-sub">Having an issue or a question? I'm here to help.</p>
   </div>
 
-  <div class="support-card">
-    <h3>Delete Your DUEVO Account</h3>
-    <p>Want to permanently delete your DUEVO account and all associated data? You can do this from within the app or request it via email.</p>
-    <a class="email-btn" href="delete-account.html" style="background:var(--surface2); border:1px solid rgba(255,255,255,0.12);">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
-      Account Deletion
-    </a>
-  </div>
-
-  <div class="support-card">
-    <h3>Games & Apps</h3>
-    <p>Let me know which game or app you're having trouble with so I can help faster.</p>
-    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:4px;">
-      <a href="pyramidka.html" style="text-decoration:none;">
-        <span class="badge badge-ios" style="font-size:0.75rem; padding:5px 12px;">Pyramidka</span>
-      </a>
-      <a href="2000iq.html" style="text-decoration:none;">
-        <span class="badge badge-android" style="font-size:0.75rem; padding:5px 12px;">2000 IQ!</span>
-      </a>
-      <a href="nutout.html" style="text-decoration:none;">
-        <span class="badge badge-ios" style="font-size:0.75rem; padding:5px 12px;">Nut Out!</span>
-      </a>
-      <a href="sgh.html" style="text-decoration:none;">
-        <span class="badge badge-android" style="font-size:0.75rem; padding:5px 12px;">Stickman: Going Home</span>
-      </a>
-      <a href="duevo.html" style="text-decoration:none;">
-        <span class="badge badge-ios" style="font-size:0.75rem; padding:5px 12px;">DUEVO</span>
+  <!-- Contact card -->
+  <div class="support-block support-block-highlight">
+    <div class="support-block-icon">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    </div>
+    <div class="support-block-body">
+      <h3>Get in Touch</h3>
+      <p>Reach me directly for bug reports, feedback, or any questions. I usually respond within 1–2 days.</p>
+      <a class="support-email-btn" href="mailto:fourtypolesstudio@gmail.com">
+        fourtypolesstudio@gmail.com
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
   </div>
+
+  <!-- Games -->
+  <div class="support-block">
+    <div class="support-block-icon support-block-icon--green">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+    </div>
+    <div class="support-block-body">
+      <h3>My Games</h3>
+      <p>Let me know which game you're having trouble with so I can help faster.</p>
+      <div class="support-game-list">
+        <a class="support-game-item" href="pyramidka.html">
+          <img src="pyramidka_logo.png" alt="Pyramidka">
+          <span>Pyramidka: Ring Stack Puzzle</span>
+        </a>
+        <a class="support-game-item" href="2000iq.html">
+          <img src="2000iq_logo.png" alt="2000 IQ">
+          <span>2000 IQ! - Tricky Puzzles</span>
+        </a>
+        <a class="support-game-item" href="2001iq.html">
+          <img src="2001iq_logo.png" alt="2001 IQ">
+          <span>2001 IQ - Tricky Brain Puzzles</span>
+        </a>
+        <a class="support-game-item" href="nutout.html">
+          <img src="logo1024.png" alt="Nut Out">
+          <span>Nut Out! - Screw Puzzle</span>
+        </a>
+        <a class="support-game-item" href="sgh.html">
+          <img src="sghLogo.png" alt="Stickman Going Home">
+          <span>Stickman: Going Home</span>
+        </a>
+        <a class="support-game-item" href="colorlaserpop.html">
+          <img src="colorlaserLogo.png" alt="Color Laser Pop">
+          <span>Color Laser Pop</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DUEVO delete account -->
+  <div class="support-block">
+    <div class="support-block-icon support-block-icon--red">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+    </div>
+    <div class="support-block-body">
+      <h3>Delete Your DUEVO Account</h3>
+      <p>Want to permanently delete your DUEVO account and all associated data? Follow the instructions on the page below.</p>
+      <a class="support-link-btn" href="delete-account.html">
+        Account Deletion Instructions
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
 </div>
 
 <footer>
-  <p>© 2026 srhtkizilkaya &nbsp;·&nbsp; <a href="index.html">Games</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+  <div class="footer-inner">
+    <a class="nav-brand" href="index.html">
+      <span class="brand-name">srht<span class="brand-accent">kizilkaya</span></span>
+      <span class="nav-sub">Games &amp; Apps</span>
+    </a>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#games">Games</a>
+        <a href="index.html#apps">Apps</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 </body>
