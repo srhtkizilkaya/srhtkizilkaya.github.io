@@ -255,7 +255,7 @@ nav {
 
 .hero-btn-ios:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
 
-/* ─── Phone mockup ───────────────────────────────────────── */
+/* ─── Hero visual ────────────────────────────────────────── */
 .hero-visual {
   position: relative;
   flex-shrink: 0;
@@ -264,10 +264,18 @@ nav {
   justify-content: center;
 }
 
+.hero-img {
+  position: relative;
+  z-index: 1;
+  width: 520px;
+  max-width: 100%;
+  filter: drop-shadow(0 32px 80px rgba(0,0,0,0.5));
+}
+
 .hero-glow-1 {
   position: absolute;
-  width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(124,106,255,0.25) 0%, transparent 65%);
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(124,106,255,0.2) 0%, transparent 65%);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -275,72 +283,10 @@ nav {
 
 .hero-glow-2 {
   position: absolute;
-  width: 200px; height: 200px;
-  background: radial-gradient(circle, rgba(61,220,160,0.2) 0%, transparent 65%);
-  bottom: 10%; right: 5%;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(61,220,160,0.15) 0%, transparent 65%);
+  bottom: 5%; right: 0%;
   pointer-events: none;
-}
-
-.phone-mockup {
-  position: relative;
-  z-index: 1;
-  width: 260px;
-  height: 520px;
-  background: rgba(255,255,255,0.04);
-  border: 1.5px solid rgba(255,255,255,0.12);
-  border-radius: 44px;
-  padding: 12px;
-  box-shadow:
-    0 40px 100px rgba(0,0,0,0.6),
-    0 0 0 1px rgba(255,255,255,0.05),
-    inset 0 1px 0 rgba(255,255,255,0.1);
-  overflow: hidden;
-}
-
-.phone-mockup::before {
-  content: '';
-  position: absolute;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 6px;
-  background: rgba(255,255,255,0.15);
-  border-radius: 3px;
-  z-index: 2;
-}
-
-.phone-screen {
-  width: 100%;
-  height: 100%;
-  border-radius: 34px;
-  overflow: hidden;
-  background: #13131f;
-  position: relative;
-}
-
-.phone-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.phone-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, #1a1a2e 0%, #0f0f1a 50%, #1a2a1a 100%);
-}
-
-.phone-placeholder-glow {
-  position: absolute;
-  width: 180px; height: 180px;
-  background: radial-gradient(circle, rgba(124,106,255,0.2) 0%, transparent 70%);
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* ─── Section ────────────────────────────────────────────── */
