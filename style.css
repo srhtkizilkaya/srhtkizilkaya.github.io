@@ -172,6 +172,7 @@ nav {
 
 /* ─── Hero ────────────────────────────────────────────────── */
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: 1.05fr 1fr;
   align-items: center;
@@ -294,35 +295,43 @@ nav {
   z-index: 0;
 }
 
-.chip {
+.geo {
   position: absolute;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transform: rotate(var(--r, 0deg));
-  animation: drift 7s ease-in-out infinite;
-  will-change: transform;
+  z-index: 1;
+  color: #a98bff;
+  filter: drop-shadow(0 0 6px currentColor);
+  opacity: 0.8;
+  animation: drift 8s ease-in-out infinite;
 }
-
-.chip svg { width: 55%; height: 55%; filter: drop-shadow(0 0 8px currentColor); }
 
 @keyframes drift {
-  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
-  50%      { transform: translateY(-8px) rotate(var(--r, 0deg)); }
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -6px; }
 }
 
-.chip-puzzle { width: 72px; height: 72px; left: 2%;  top: 8%;    --r: -12deg; color: #a98bff; }
-.chip-gem    { width: 60px; height: 60px; left: 10%; bottom: 6%; --r: 10deg;  color: #4fd1ff; animation-delay: -2s; }
-.chip-star   { width: 58px; height: 58px; right: 0;  top: 0;     --r: 14deg;  color: #ffc94d; animation-delay: -4s; }
-.chip-dice   { width: 50px; height: 50px; right: -2%; bottom: 14%; --r: -16deg; color: #ff6f91; animation-delay: -1s; }
-.chip-bolt   { width: 42px; height: 42px; right: 8%; top: 46%;   --r: 8deg;   color: #4ee08c; animation-delay: -5s; }
+.geo-ring { width: 18px; height: 18px; border: 2px solid currentColor; border-radius: 50%; }
+
+.geo-plus { width: 16px; height: 16px; }
+.geo-plus::before, .geo-plus::after {
+  content: ''; position: absolute; background: currentColor; border-radius: 2px;
+}
+.geo-plus::before { left: 7px; top: 0; width: 2px; height: 16px; }
+.geo-plus::after  { top: 7px; left: 0; height: 2px; width: 16px; }
+
+.geo-tri {
+  width: 18px; height: 16px;
+  background: currentColor;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0, 50% 22%, 16% 88%, 84% 88%, 50% 22%);
+}
+
+.geo-diamond { width: 12px; height: 12px; border: 2px solid currentColor; rotate: 45deg; border-radius: 2px; }
+
+.g1 { left: 4%;  top: 12%;   color: #a98bff; }
+.g2 { left: 12%; bottom: 10%; color: #4fd1ff; animation-delay: -2s; }
+.g3 { right: 4%; top: 6%;    color: #ffc94d; animation-delay: -4s; }
+.g4 { right: 1%; bottom: 22%; color: #ff6f91; animation-delay: -1s; }
+.g5 { right: 10%; top: 50%;  width: 12px; height: 12px; color: #4ee08c; animation-delay: -5s; }
+.g6 { left: 1%;  top: 58%;   color: #ff6f91; opacity: 0.6; animation-delay: -3s; }
 
 .spark {
   position: absolute;
@@ -343,6 +352,10 @@ nav {
 .sp3 { right: 14%; top: 10%; width: 10px; height: 10px; background: #ffe08a; animation-delay: -2s; }
 .sp4 { right: 2%; top: 70%; background: #8ff0c0; animation-delay: -0.5s; }
 .sp5 { left: 30%; bottom: 0; width: 9px; height: 9px; animation-delay: -2.6s; }
+.sp6 { left: 36%; top: 6%;  width: 10px; height: 10px; animation-delay: -1.8s; }
+.sp7 { left: -1%; top: 38%; width: 8px;  height: 8px;  background: #8ff0c0; animation-delay: -3s; }
+.sp8 { left: 44%; top: 78%; width: 9px;  height: 9px;  background: #ffe08a; animation-delay: -0.8s; }
+.sp9 { left: 20%; top: 96%; width: 7px;  height: 7px;  animation-delay: -2.2s; }
 
 .paused *, .paused *::before, .paused *::after { animation-play-state: paused !important; }
 
@@ -890,7 +903,7 @@ footer a:hover { color: var(--text); }
   .hero { grid-template-columns: 1fr; text-align: center; padding-top: 24px; }
   .hero-btns { justify-content: center; }
   .hero-visual { justify-content: center; min-height: 0; }
-  .chip-bolt, .chip-dice, .sp2, .sp4 { display: none; }
+  .g5, .g6, .sp2, .sp4 { display: none; }
   .features { grid-template-columns: 1fr; }
   .block-head .outline-btn { display: none; }
 }
