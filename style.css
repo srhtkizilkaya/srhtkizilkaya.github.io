@@ -142,8 +142,8 @@ nav {
   gap: 40px;
   max-width: 1140px;
   margin: 0 auto;
-  padding: calc(var(--nav-h) + 72px) 40px 80px;
-  min-height: 90vh;
+  padding: calc(var(--nav-h) + 40px) 40px 48px;
+  min-height: 75vh;
 }
 
 .hero-content { flex: 1; max-width: 540px; }
@@ -254,6 +254,88 @@ nav {
 }
 
 .hero-btn-ios:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+
+/* ─── Decorative shapes ──────────────────────────────────── */
+.shape {
+  position: absolute;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-12px) rotate(var(--r, 0deg)); }
+}
+
+.shape-1 {
+  width: 40px; height: 40px;
+  background: rgba(124,106,255,0.55);
+  border-radius: 10px;
+  top: 12%; left: 5%;
+  --r: 18deg;
+  animation-delay: 0s;
+  box-shadow: 0 0 20px rgba(124,106,255,0.3);
+}
+
+.shape-2 {
+  width: 24px; height: 24px;
+  background: rgba(61,220,160,0.6);
+  border-radius: 6px;
+  top: 25%; right: 3%;
+  --r: -22deg;
+  animation-delay: 1s;
+  box-shadow: 0 0 16px rgba(61,220,160,0.3);
+}
+
+.shape-3 {
+  width: 52px; height: 52px;
+  background: rgba(124,106,255,0.35);
+  border-radius: 14px;
+  bottom: 20%; left: 2%;
+  --r: 35deg;
+  animation-delay: 2s;
+  box-shadow: 0 0 24px rgba(124,106,255,0.2);
+}
+
+.shape-4 {
+  width: 18px; height: 18px;
+  background: rgba(255,180,80,0.7);
+  border-radius: 50%;
+  top: 8%; right: 18%;
+  animation-delay: 0.5s;
+  box-shadow: 0 0 14px rgba(255,180,80,0.4);
+}
+
+.shape-5 {
+  width: 30px; height: 30px;
+  background: rgba(61,220,160,0.4);
+  border-radius: 8px;
+  bottom: 10%; right: 8%;
+  --r: -15deg;
+  animation-delay: 1.5s;
+  box-shadow: 0 0 18px rgba(61,220,160,0.2);
+}
+
+.shape-left-1 {
+  width: 36px; height: 36px;
+  background: rgba(124,106,255,0.45);
+  border-radius: 10px;
+  top: 18%; left: 38%;
+  --r: 25deg;
+  animation-delay: 0.8s;
+  box-shadow: 0 0 18px rgba(124,106,255,0.25);
+}
+
+.shape-left-2 {
+  width: 20px; height: 20px;
+  background: rgba(255,120,120,0.6);
+  border-radius: 50%;
+  bottom: 28%; left: 32%;
+  animation-delay: 2.2s;
+  box-shadow: 0 0 14px rgba(255,120,120,0.3);
+}
 
 /* ─── Hero visual ────────────────────────────────────────── */
 .hero-visual {
