@@ -418,10 +418,11 @@ nav {
 .cards-scroll::-webkit-scrollbar { display: none; }
 
 .cards-track {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 16px;
-  width: max-content;
   padding: 4px 2px 8px;
+  width: 100%;
 }
 
 /* ─── Card ───────────────────────────────────────────────── */
@@ -429,8 +430,6 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 220px;
-  flex-shrink: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -910,25 +909,162 @@ footer {
 }
 
 /* ─── Support page ───────────────────────────────────────── */
-.support-cards { display: grid; gap: 14px; margin-top: 24px; }
+.page-header {
+  margin-bottom: 40px;
+}
 
-.support-card {
-  padding: 22px 24px;
+.page-header h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.page-sub {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.support-block {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  margin-bottom: 16px;
   transition: border-color 0.2s, background 0.2s;
 }
 
-.support-card:hover { border-color: var(--border-hover); background: var(--surface-hover); }
+.support-block:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+}
 
-.support-card h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+.support-block-highlight {
+  border-color: rgba(124,106,255,0.25);
+  background: rgba(124,106,255,0.06);
+}
 
-.support-card p {
+.support-block-highlight:hover {
+  border-color: rgba(124,106,255,0.4);
+  background: rgba(124,106,255,0.1);
+}
+
+.support-block-icon {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124,106,255,0.14);
+  border: 1px solid rgba(124,106,255,0.24);
+  border-radius: 14px;
+  color: var(--accent-light);
+}
+
+.support-block-icon--green {
+  background: rgba(61,220,160,0.12);
+  border-color: rgba(61,220,160,0.22);
+  color: var(--accent2-light);
+}
+
+.support-block-icon--red {
+  background: rgba(255,80,80,0.1);
+  border-color: rgba(255,80,80,0.2);
+  color: rgba(255,130,130,0.9);
+}
+
+.support-block-body { flex: 1; }
+
+.support-block-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.support-block-body p {
   color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.support-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(124,106,255,0.15);
+  border: 1px solid rgba(124,106,255,0.3);
+  border-radius: 10px;
+  color: var(--accent-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.support-email-btn:hover {
+  background: rgba(124,106,255,0.25);
+  border-color: rgba(124,106,255,0.5);
+  transform: translateY(-1px);
+}
+
+.support-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.support-link-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.support-game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.support-game-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
   font-size: 0.85rem;
-  line-height: 1.6;
-  margin-bottom: 14px;
+  font-weight: 500;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.support-game-item:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-hover);
+}
+
+.support-game-item img {
+  width: 36px; height: 36px;
+  border-radius: 9px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 /* ─── Responsive ─────────────────────────────────────────── */
