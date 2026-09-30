@@ -3,108 +3,254 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>srhtkizilkaya</title>
+  <title>srhtkizilkaya — Mobile Games & Apps</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ── Nav ── -->
 <nav>
-  <a class="nav-brand" href="index.html">srhtkizilkaya</a>
+  <div class="nav-left">
+    <a class="nav-brand" href="index.html">
+      srhtkizilkaya
+      <span class="nav-sub">Games &amp; Apps</span>
+    </a>
+  </div>
   <ul class="nav-links">
     <li><a href="#games">Games</a></li>
     <li><a href="#apps">Apps</a></li>
     <li><a href="support.html">Support</a></li>
   </ul>
+  <div class="nav-right">
+    <a class="nav-contact-btn" href="support.html">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      Contact
+    </a>
+  </div>
 </nav>
 
+<!-- ── Hero ── -->
 <section class="hero">
-  <h1>Mobile Games & Apps</h1>
-  <p>Independent mobile games and apps on the App Store and Google Play.</p>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Indie Developer
+    </div>
+    <h1 class="hero-title">
+      Mobile Games &amp; Apps<br>
+      <span class="hero-title-accent">for Curious Minds</span>
+    </h1>
+    <p class="hero-desc">Independent mobile games and apps on the App Store and Google Play. Simple, fun and challenging experiences for everyone.</p>
+    <div class="hero-btns">
+      <a class="hero-btn hero-btn-android" href="https://play.google.com/store/apps/developer?id=Fourty+Poles+Studio" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="m3 20.5 9-9 9 9M3 3.5l9 9 9-9"/></svg>
+        <div>
+          <span class="hero-btn-sub">Get it on</span>
+          <span class="hero-btn-main">Google Play</span>
+        </div>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a class="hero-btn hero-btn-ios" href="https://apps.apple.com/developer/serhat-kizilkaya/id1548759275" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <div>
+          <span class="hero-btn-sub">Download on the</span>
+          <span class="hero-btn-main">App Store</span>
+        </div>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="phone-mockup">
+      <div class="phone-screen">
+        <!-- Replace src with actual hero image when ready -->
+        <img src="heroImage.png" alt="Game preview" class="phone-img" onerror="this.style.display='none'">
+        <div class="phone-placeholder">
+          <div class="phone-placeholder-glow"></div>
+          <svg width="48" height="48" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+  </div>
 </section>
 
+<!-- ── Games ── -->
 <div class="section" id="games">
   <div class="section-header">
-    <div class="section-title">Games</div>
-    <div class="section-line"></div>
+    <div>
+      <h2 class="section-heading">Our <span class="accent-text">Games</span></h2>
+      <p class="section-sub">Puzzle games and casual experiences for mobile platforms.</p>
+    </div>
   </div>
-  <div class="games-grid">
 
-    <a class="game-card" href="pyramidka.html">
-      <img src="pyramidka_logo.png" alt="Pyramidka">
-      <span class="game-name">Pyramidka: Ring Stack Puzzle</span>
-      <div class="game-platforms">
-        <span class="badge badge-ios">iOS</span>
-        <span class="badge badge-android">Android</span>
-      </div>
-    </a>
+  <div class="cards-scroll">
+    <div class="cards-track">
 
-    <a class="game-card" href="2000iq.html">
-      <img src="2000iq_logo.png" alt="2000 IQ">
-      <span class="game-name">2000 IQ! - Tricky Puzzles</span>
-      <div class="game-platforms">
-        <span class="badge badge-ios">iOS</span>
-        <span class="badge badge-android">Android</span>
-      </div>
-    </a>
+      <a class="card" href="pyramidka.html">
+        <div class="card-arrow">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <img src="pyramidka_logo.png" alt="Pyramidka">
+        <div class="card-body">
+          <h3>Pyramidka: Ring Stack Puzzle</h3>
+          <p>Sort the rings and solve colorful stacking puzzles.</p>
+        </div>
+        <div class="card-platforms">
+          <span class="badge badge-android">Android</span>
+          <span class="badge badge-ios">iOS</span>
+        </div>
+      </a>
 
-    <a class="game-card" href="2001iq.html">
-      <img src="2001iq_logo.png" alt="2001 IQ">
-      <span class="game-name">2001 IQ - Tricky Brain Puzzles</span>
-      <div class="game-platforms">
-        <span class="badge badge-android">Android</span>
-      </div>
-    </a>
+      <a class="card" href="2000iq.html">
+        <div class="card-arrow">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <img src="2000iq_logo.png" alt="2000 IQ">
+        <div class="card-body">
+          <h3>2000 IQ! - Tricky Puzzles</h3>
+          <p>Train your brain with clever logic puzzles.</p>
+        </div>
+        <div class="card-platforms">
+          <span class="badge badge-android">Android</span>
+          <span class="badge badge-ios">iOS</span>
+        </div>
+      </a>
 
-    <a class="game-card" href="nutout.html">
-      <img src="logo1024.png" alt="Nut Out">
-      <span class="game-name">Nut Out! - Screw Puzzle</span>
-      <div class="game-platforms">
-        <span class="badge badge-ios">iOS</span>
-        <span class="badge badge-android">Android</span>
-      </div>
-    </a>
+      <a class="card" href="2001iq.html">
+        <div class="card-arrow">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <img src="2001iq_logo.png" alt="2001 IQ">
+        <div class="card-body">
+          <h3>2001 IQ - Tricky Brain Puzzles</h3>
+          <p>A new set of challenging puzzles and brain teasers.</p>
+        </div>
+        <div class="card-platforms">
+          <span class="badge badge-android">Android</span>
+        </div>
+      </a>
 
-    <a class="game-card" href="sgh.html">
-      <img src="sghLogo.png" alt="Stickman Going Home">
-      <span class="game-name">Stickman: Going Home</span>
-      <div class="game-platforms">
-        <span class="badge badge-android">Android</span>
-      </div>
-    </a>
+      <a class="card" href="nutout.html">
+        <div class="card-arrow">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <img src="logo1024.png" alt="Nut Out">
+        <div class="card-body">
+          <h3>Nut Out! - Screw Puzzle</h3>
+          <p>Unscrew, solve and clear the board.</p>
+        </div>
+        <div class="card-platforms">
+          <span class="badge badge-android">Android</span>
+          <span class="badge badge-ios">iOS</span>
+        </div>
+      </a>
 
-    <a class="game-card" href="colorlaserpop.html">
-      <img src="colorlaserLogo.png" alt="Color Laser Pop">
-      <span class="game-name">Color Laser Pop</span>
-      <div class="game-platforms">
-        <span class="badge badge-android">Android</span>
-      </div>
-    </a>
+      <a class="card" href="sgh.html">
+        <div class="card-arrow">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <img src="sghLogo.png" alt="Stickman Going Home">
+        <div class="card-body">
+          <h3>Stickman: Going Home</h3>
+          <p>Guide the stickman to find his way home.</p>
+        </div>
+        <div class="card-platforms">
+          <span class="badge badge-android">Android</span>
+        </div>
+      </a>
 
+      <a class="card" href="colorlaserpop.html">
+        <div class="card-arrow">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <img src="colorlaserLogo.png" alt="Color Laser Pop">
+        <div class="card-body">
+          <h3>Color Laser Pop</h3>
+          <p>Pop the bubbles with laser precision!</p>
+        </div>
+        <div class="card-platforms">
+          <span class="badge badge-android">Android</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 </div>
 
+<!-- ── Apps ── -->
 <div class="section" id="apps">
   <div class="section-header">
-    <div class="section-title">Apps</div>
-    <div class="section-line"></div>
+    <div>
+      <h2 class="section-heading">Our <span class="accent-text">Apps</span></h2>
+      <p class="section-sub">Productivity tools built with simplicity in mind.</p>
+    </div>
   </div>
-  <div class="games-grid">
 
-    <a class="game-card" href="duevo.html">
-      <img src="duevonewlogo.png" alt="DUEVO" style="border-radius:16px;">
-      <span class="game-name">DUEVO</span>
-      <p class="game-tagline">No Ads. Simple. Fast.</p>
-      <div class="game-platforms">
-        <span class="badge badge-ios">iOS</span>
-        <span class="badge badge-android">Android</span>
-      </div>
-    </a>
+  <div class="cards-scroll">
+    <div class="cards-track">
 
+      <a class="card" href="duevo.html">
+        <div class="card-arrow">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <img src="duevonewlogo.png" alt="DUEVO" style="border-radius:18px;">
+        <div class="card-body">
+          <h3>DUEVO</h3>
+          <p>Simple accounting app. No ads, no clutter, just your numbers.</p>
+        </div>
+        <div class="card-platforms">
+          <span class="badge badge-android">Android</span>
+          <span class="badge badge-ios">iOS</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 </div>
 
+<!-- ── Features ── -->
+<div class="features-section">
+  <div class="feature">
+    <div class="feature-icon">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+    </div>
+    <h4>Fun &amp; Challenging</h4>
+    <p>Simple mechanics, deep and satisfying puzzles.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+    </div>
+    <h4>Mobile First</h4>
+    <p>Designed for a smooth experience on Android and iOS.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </div>
+    <h4>Made with Passion</h4>
+    <p>Indie developer creating games in my free time.</p>
+  </div>
+</div>
+
+<!-- ── Footer ── -->
 <footer>
-  <p>© 2026 srhtkizilkaya &nbsp;·&nbsp; <a href="support.html">Support</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-name">srhtkizilkaya</span>
+      <span class="footer-tagline">Games &amp; Apps</span>
+    </div>
+    <div class="footer-links">
+      <a href="#games">Games</a>
+      <a href="#apps">Apps</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">© 2026 srhtkizilkaya</div>
+  </div>
 </footer>
 
 </body>
