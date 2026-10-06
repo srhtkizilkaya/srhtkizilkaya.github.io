@@ -425,8 +425,11 @@ nav {
   text-decoration: none;
   color: #fff;
   overflow: hidden;
-  background: #14121f;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.10);
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(#12101c, #12101c) padding-box,
+    linear-gradient(160deg, rgba(255,255,255,0.38) 0%, rgba(169,139,255,0.30) 30%, rgba(255,255,255,0.04) 60%, rgba(91,140,255,0.32) 100%) border-box;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
   transform: rotateX(var(--rx)) rotateY(var(--ry));
   transform-style: preserve-3d;
   transition: transform 0.5s cubic-bezier(.2,.8,.2,1), box-shadow 0.4s;
@@ -439,8 +442,9 @@ nav {
   z-index: -2;
   inset: -30%;
   background: var(--img) center / cover;
-  filter: blur(34px) saturate(1.8) brightness(0.9);
-  opacity: 0.9;
+  filter: blur(40px) saturate(1.15) brightness(0.6);
+  opacity: 0.55;
+  transition: opacity 0.4s;
 }
 
 .card::after {
@@ -459,7 +463,7 @@ nav {
   inset: 0;
   border-radius: inherit;
   background:
-    radial-gradient(circle at var(--mx) var(--my), rgba(255,255,255,0.28) 0%, transparent 45%),
+    radial-gradient(circle at var(--mx) var(--my), rgba(255,255,255,0.14) 0%, transparent 45%),
     linear-gradient(115deg, transparent 30%, rgba(255,120,220,0.12) 45%, rgba(120,220,255,0.14) 55%, transparent 70%);
   background-size: 100% 100%, 250% 250%;
   background-position: 0 0, var(--mx) var(--my);
@@ -472,8 +476,10 @@ nav {
 .card:hover::before { opacity: 1; }
 
 .card:hover {
-  box-shadow: 0 28px 60px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.22);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.55), 0 0 24px rgba(139,108,255,0.18);
 }
+
+.card:hover .card-glow { opacity: 0.75; }
 
 .card img {
   width: 100px;
@@ -481,8 +487,8 @@ nav {
   border-radius: 26px;
   object-fit: cover;
   margin-bottom: 18px;
-  box-shadow: 0 16px 34px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.18);
-  -webkit-box-reflect: below 6px linear-gradient(transparent 70%, rgba(255,255,255,0.18));
+  box-shadow: 0 16px 34px rgba(0,0,0,0.55);
+  -webkit-box-reflect: below 6px linear-gradient(transparent 78%, rgba(255,255,255,0.08));
   transform: translateZ(40px);
   transition: transform 0.4s cubic-bezier(.2,.8,.2,1);
 }
