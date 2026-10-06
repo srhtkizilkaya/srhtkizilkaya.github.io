@@ -425,11 +425,9 @@ nav {
   text-decoration: none;
   color: #fff;
   overflow: hidden;
-  border: 1.5px solid transparent;
-  background:
-    linear-gradient(#12101c, #12101c) padding-box,
-    linear-gradient(160deg, rgba(255,255,255,0.38) 0%, rgba(169,139,255,0.30) 30%, rgba(255,255,255,0.04) 60%, rgba(91,140,255,0.32) 100%) border-box;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.07);
+  background: #12101c;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.10);
   transform: rotateX(var(--rx)) rotateY(var(--ry));
   transition: transform 0.5s cubic-bezier(.2,.8,.2,1), box-shadow 0.4s;
 }
@@ -475,7 +473,8 @@ nav {
 .card:hover::before { opacity: 1; }
 
 .card:hover {
-  box-shadow: 0 28px 60px rgba(0,0,0,0.55), 0 0 24px rgba(139,108,255,0.18);
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.16);
 }
 
 .card:hover .card-glow { opacity: 0.75; }
@@ -721,15 +720,50 @@ footer a:hover { color: var(--text); }
 .game-page {
   position: relative;
   z-index: 1;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  isolation: isolate;
+  overflow: hidden;
+  width: calc(100% - 48px);
+  max-width: 1040px;
+  margin: 40px auto 0;
+  padding: 36px 48px 44px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  column-gap: 44px;
   align-items: center;
-  text-align: center;
-  padding: 56px 24px 80px;
+  border-radius: 32px;
+  background: rgba(18,16,30,0.75);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
+.gp-glow {
+  position: absolute;
+  z-index: -1;
+  left: -10%; top: -40%;
+  width: 70%; height: 180%;
+  background: var(--img) center / cover;
+  filter: blur(90px) saturate(1.3) brightness(0.7);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.game-page::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(90deg, transparent 30%, #000 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 30%, #000 100%);
+  pointer-events: none;
+}
+
+.game-page > * { grid-column: 2; }
+
 .back-link {
+  grid-column: 1 / -1;
+  justify-self: start;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -737,40 +771,55 @@ footer a:hover { color: var(--text); }
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 500;
-  margin-bottom: 40px;
-  padding: 9px 18px;
-  border-radius: 12px;
+  margin-bottom: 28px;
+  padding: 8px 16px;
+  border-radius: 999px;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: rgba(255,255,255,0.04);
   transition: color 0.2s, border-color 0.2s;
 }
 
 .back-link:hover { color: var(--text); border-color: var(--border-hover); }
 
 .game-icon {
-  width: 128px;
-  height: 128px;
-  border-radius: 28px;
+  grid-column: 1;
+  grid-row: 2 / span 5;
+  width: 220px;
+  height: 220px;
+  border-radius: 48px;
   object-fit: cover;
-  box-shadow: 0 20px 60px rgba(80,50,200,0.35), 0 0 0 1px rgba(255,255,255,0.08);
-  margin-bottom: 24px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.55);
 }
 
 .game-page h1 {
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
   font-weight: 800;
   letter-spacing: -0.03em;
+  line-height: 1.08;
   margin-bottom: 10px;
 }
 
-.tagline { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 32px; }
-.store-btn-only { color: var(--text-muted); font-size: 0.85rem; }
+.tagline { color: rgba(242,242,248,0.72); font-size: 1.15rem; margin-bottom: 18px; }
+
+.gp-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px; }
+
+.gp-chip {
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #e6defd;
+  background: rgba(169,139,255,0.12);
+  border: 1px solid rgba(169,139,255,0.35);
+}
+
+.store-btn-only { color: var(--text-muted); font-size: 0.85rem; margin-top: 12px !important; }
 
 .store-buttons {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 12px;
-  width: 260px;
+  width: auto;
 }
 
 .store-btn {
@@ -778,8 +827,9 @@ footer a:hover { color: var(--text); }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 14px 20px;
-  border-radius: 12px;
+  min-width: 230px;
+  padding: 14px 22px;
+  border-radius: 14px;
   text-decoration: none;
   font-size: 0.98rem;
   font-weight: 600;
@@ -790,21 +840,107 @@ footer a:hover { color: var(--text); }
 .store-btn:hover { transform: translateY(-2px); }
 
 .store-btn-ios {
-  background: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.3);
   color: #fff;
   border: 1.5px solid rgba(255,255,255,0.85);
 }
 
-.store-btn-ios:hover { background: rgba(255,255,255,0.06); }
+.store-btn-ios:hover { background: rgba(255,255,255,0.08); }
 
 .store-btn-android {
-  background: rgba(61,220,132,0.1);
-  color: #fff;
-  border: 1.5px solid rgba(61,220,132,0.55);
+  background: #fff;
+  color: #111;
+  border: 1.5px solid #fff;
 }
 
-.store-btn-android:hover { box-shadow: 0 8px 28px rgba(61,220,132,0.2); }
+.store-btn-android img { filter: none !important; }
+.store-btn-android:hover { box-shadow: 0 10px 30px rgba(255,255,255,0.15); }
 
+/* More games + help */
+.gp-more, .gp-help {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 48px);
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.gp-more { margin-top: 44px; }
+.gp-more .block-title { margin-bottom: 16px; font-size: 1.5rem; }
+
+.gp-more-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.gp-more-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.25s, background 0.25s, border-color 0.25s;
+}
+
+.gp-more-item:hover { transform: translateY(-4px); background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
+.gp-more-item img { width: 64px; height: 64px; border-radius: 16px; object-fit: cover; box-shadow: 0 10px 22px rgba(0,0,0,0.45); }
+
+.gp-help {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 56px;
+}
+
+.gp-help-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.gp-help-item:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
+.gp-help-item strong { display: block; font-size: 1rem; }
+.gp-help-item small { display: block; color: var(--text-muted); font-size: 0.85rem; margin-top: 2px; }
+
+.gp-help-icon {
+  flex-shrink: 0;
+  width: 46px; height: 46px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 14px;
+  color: var(--accent-light);
+  background: rgba(139,108,255,0.12);
+}
+
+@media (max-width: 760px) {
+  .game-page { grid-template-columns: 1fr; text-align: center; padding: 24px 20px 32px; width: calc(100% - 32px); }
+  .game-page > *, .game-icon { grid-column: 1; grid-row: auto; }
+  .back-link { justify-self: center; }
+  .game-icon { justify-self: center; width: 140px; height: 140px; border-radius: 32px; margin-bottom: 20px; }
+  .gp-meta, .store-buttons { justify-content: center; }
+  .store-btn { min-width: 0; width: 100%; max-width: 300px; margin: 0 auto; }
+  .gp-glow { left: -20%; top: -20%; width: 140%; height: 70%; }
+  .gp-more, .gp-help { width: calc(100% - 32px); }
+  .gp-more-list { grid-template-columns: repeat(2, 1fr); }
+  .gp-help { grid-template-columns: 1fr; }
+}
 /* ─── Text pages (privacy / support / delete) ────────────── */
 .privacy-page,
 .support-page,
