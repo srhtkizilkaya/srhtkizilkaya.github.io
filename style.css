@@ -431,7 +431,6 @@ nav {
     linear-gradient(160deg, rgba(255,255,255,0.38) 0%, rgba(169,139,255,0.30) 30%, rgba(255,255,255,0.04) 60%, rgba(91,140,255,0.32) 100%) border-box;
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
   transform: rotateX(var(--rx)) rotateY(var(--ry));
-  transform-style: preserve-3d;
   transition: transform 0.5s cubic-bezier(.2,.8,.2,1), box-shadow 0.4s;
 }
 
@@ -459,7 +458,7 @@ nav {
 .card::before {
   content: '';
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   inset: 0;
   border-radius: inherit;
   background:
@@ -489,11 +488,10 @@ nav {
   margin-bottom: 18px;
   box-shadow: 0 16px 34px rgba(0,0,0,0.55);
   -webkit-box-reflect: below 6px linear-gradient(transparent 78%, rgba(255,255,255,0.08));
-  transform: translateZ(40px);
-  transition: transform 0.4s cubic-bezier(.2,.8,.2,1);
+  position: relative;
+  z-index: 3;
+  backface-visibility: hidden;
 }
-
-.card:hover img { transform: translateZ(60px) scale(1.05); }
 
 .card h3 {
   font-size: 1rem;
@@ -513,6 +511,7 @@ nav {
 }
 
 .card .pills { justify-content: center; }
+.card h3, .card p, .card .pills { position: relative; z-index: 3; }
 .card .pill { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .card-arrow {
   position: absolute;

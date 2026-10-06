@@ -183,8 +183,8 @@
         const x = (e.clientX - r.left) / r.width;
         const y = (e.clientY - r.top) / r.height;
         card.classList.add('tilting');
-        card.style.setProperty('--ry', ((x - 0.5) * 16) + 'deg');
-        card.style.setProperty('--rx', ((0.5 - y) * 16) + 'deg');
+        card.style.setProperty('--ry', ((x - 0.5) * 10) + 'deg');
+        card.style.setProperty('--rx', ((0.5 - y) * 10) + 'deg');
         card.style.setProperty('--mx', (x * 100) + '%');
         card.style.setProperty('--my', (y * 100) + '%');
       });
