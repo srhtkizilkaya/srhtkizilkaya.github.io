@@ -175,6 +175,26 @@
   document.addEventListener('visibilitychange', () => {
     document.documentElement.classList.toggle('paused', document.hidden);
   });
+
+  if (matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)').matches) {
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        card.classList.add('tilting');
+        card.style.setProperty('--ry', ((x - 0.5) * 16) + 'deg');
+        card.style.setProperty('--rx', ((0.5 - y) * 16) + 'deg');
+        card.style.setProperty('--mx', (x * 100) + '%');
+        card.style.setProperty('--my', (y * 100) + '%');
+      });
+      card.addEventListener('pointerleave', () => {
+        card.classList.remove('tilting');
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
 </script>
 
 </body>
