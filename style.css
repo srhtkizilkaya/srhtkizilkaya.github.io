@@ -605,6 +605,23 @@ nav {
 
 .app-card img { width: 64px; height: 64px; border-radius: 16px; object-fit: cover; }
 
+.app-card + .app-card { margin-top: 12px; }
+
+.app-logo-text {
+  flex-shrink: 0;
+  width: 64px; height: 64px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #2b5fd9, #6a3fd1);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.pill-soon { color: #ffd27a; background: rgba(255,201,77,0.1); border: 1px solid rgba(255,201,77,0.35); }
+.pill-soon::before { display: none; }
+
 .app-card-body { flex: 1; }
 .app-card-body h3 { font-size: 1.1rem; font-weight: 700; }
 .app-card-body p { font-size: 0.9rem; color: var(--text-muted); margin-top: 2px; }
