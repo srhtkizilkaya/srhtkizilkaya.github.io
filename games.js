@@ -1,7 +1,7 @@
 const CATALOG = [
   { page: 'pyramidka.html',     name: 'Pyramidka: Ring Stack Puzzle',  icon: 'pyramidka_logo.png', genre: 'Puzzle',  platforms: ['Android', 'iOS'] },
   { page: '2000iq.html',        name: '2000 IQ! - Tricky Puzzles',     icon: '2000iq_logo.png',    genre: 'Brain teaser', platforms: ['Android', 'iOS'] },
-  { page: '2001iq.html',        name: '2001 IQ - Tricky Brain Puzzles', icon: '2001iq_logo.png',   genre: 'Brain teaser', platforms: ['Android'] },
+  { page: '2001iq.html',        name: '2001 IQ - Tricky Brain Puzzles', icon: '2001iq_logo.png',   genre: 'Brain teaser', platforms: ['Android', 'iOS'] },
   { page: 'nutout.html',        name: 'Nut Out! - Screw Puzzle',       icon: 'logo1024.png',       genre: 'Puzzle',  platforms: ['Android', 'iOS'] },
   { page: 'sgh.html',           name: 'Stickman: Going Home',          icon: 'sghLogo.png',        genre: 'Casual',  platforms: ['Android'] },
   { page: 'colorlaserpop.html', name: 'Color Laser Pop',               icon: 'colorlaserLogo.png', genre: 'Puzzle',  platforms: ['Android'] },
