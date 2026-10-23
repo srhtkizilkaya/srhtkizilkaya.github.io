@@ -1074,6 +1074,50 @@ footer a:hover { color: var(--text); }
 
 .email-btn:hover { background: rgba(139,108,255,0.22); }
 
+.kd-icon {
+  display: block;
+  width: 88px; height: 88px;
+  border-radius: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+}
+
+.kd-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 44px 0 28px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kd-divider::before, .kd-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.kd-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(255,201,77,0.1);
+  border: 1px solid rgba(255,201,77,0.35);
+  color: #ffd27a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.kd-link:hover { background: rgba(255,201,77,0.18); }
+
 /* ─── Support page ───────────────────────────────────────── */
 .page-header { margin-bottom: 32px; }
 .page-sub { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; }
