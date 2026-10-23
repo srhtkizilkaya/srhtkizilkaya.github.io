@@ -1074,12 +1074,20 @@ footer a:hover { color: var(--text); }
 
 .email-btn:hover { background: rgba(139,108,255,0.22); }
 
+.kd-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.kd-title h1 { margin-bottom: 0 !important; }
+
 .kd-icon {
-  display: block;
-  width: 88px; height: 88px;
-  border-radius: 22px;
-  margin-bottom: 18px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .kd-divider {
