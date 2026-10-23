@@ -29,7 +29,7 @@
 
 <div class="privacy-page">
   <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: October 22, 2026</p>
+  <p class="last-updated">Last updated: October 23, 2026</p>
 
   <p class="intro">
     This Privacy Policy applies to all games and apps developed and published by <strong>Serhat Kızılkaya</strong> (also known as <strong>Fourty Poles Studio</strong>), including:
@@ -89,7 +89,7 @@
   <!-- KATRE SECTION -->
   <div class="policy-section">
     <h2>3a. Information We Collect — <span style="color:#ffc94d;">★ KATRE</span></h2>
-    <p>Katre is a dhikr counter. It works fully offline, shows no ads and contains no analytics or advertising trackers.</p>
+    <p>Katre is a dhikr counter. It works fully offline and shows no ads. It does not use the Advertising ID and contains no advertising trackers; it only keeps anonymous usage counts (see “Automatically Collected”).</p>
 
     <p><strong>Kept only on your device</strong></p>
     <ul>
@@ -122,6 +122,8 @@
     <p><strong>Automatically Collected</strong></p>
     <ul>
       <li>Crash reports (via Firebase Crashlytics): the error, device model, operating system and app version, and a random installation ID. Crash reports contain no dhikr counts or profile data.</li>
+      <li>Anonymous usage counts (via Google Analytics for Firebase): that the app was opened and for how long, the app version, device model, operating system, language and approximate country (from the IP address, which is not stored), linked to a random app-instance ID. Only the automatic events are used; nothing about your dhikr, your profile or your name. The Advertising ID is not collected, and ad storage and ad personalisation are switched off.</li>
+      <li>Premium purchases: subscriptions are bought and managed in Google Play (or the App Store). We never receive your payment details; the store only tells the app whether your subscription is active.</li>
     </ul>
 
     <p><strong>Device permissions</strong></p>
@@ -144,6 +146,8 @@
       <li>To keep rankings fair (unrealistically fast counting is held back)</li>
       <li>To let you restore your profile and your dhikr counts on a new phone with your Google account</li>
       <li>To fix crashes and improve stability</li>
+      <li>To know how many people use the app, in which countries and on which versions (anonymous usage counts)</li>
+      <li>To turn Premium on while your subscription is active</li>
     </ul>
     <p>We do not sell your data, do not use it for advertising, and do not share it with anyone except the service providers listed below that run the app.</p>
   </div>
@@ -151,9 +155,9 @@
   <div class="policy-section">
     <h2>3d. Data Location, Retention &amp; Deletion — <span style="color:#ffc94d;">★ KATRE</span></h2>
     <p><strong>Where it is stored.</strong> Ranking data is stored in Google Firebase (Cloud Firestore and Cloud Functions) in Belgium (europe-west1). Profile photos are stored in Firebase Cloud Storage in the United States (us-east1). Crash reports are processed by Google. Data is encrypted in transit and at rest. By joining the rankings you consent to this transfer and processing outside Türkiye under Google’s safeguards.</p>
-    <p><strong>How long.</strong> Your ranking profile is kept while you take part in the rankings, and your Google backup while your account exists. Crash reports are kept for up to 90 days by Firebase Crashlytics.</p>
+    <p><strong>How long.</strong> Your ranking profile is kept while you take part in the rankings, and your Google backup while your account exists. Crash reports are kept for up to 90 days by Firebase Crashlytics. Anonymous usage counts are kept for up to 14 months in Google Analytics.</p>
     <p><strong>Deleting your data.</strong> In the app go to <strong>Profile → Your community profile → Leave the rankings and delete my data</strong>. This immediately and permanently deletes your profile, nickname, photo, all your ranking entries, your Google backup and your account from our servers. Combined totals of countries, provinces and districts are not linked to you and remain. You can also request deletion by email at <a href="mailto:fourtypolesstudio@gmail.com" style="color:var(--accent2);">fourtypolesstudio@gmail.com</a>; we process requests within 30 days.</p>
-    <p><strong>KVKK (Türkiye).</strong> For users in Türkiye this section also serves as the clarification text (<em>aydınlatma metni</em>) under Law No. 6698 (KVKK). The data controller (<em>veri sorumlusu</em>) is <strong>Serhat Kızılkaya</strong>. Ranking data is processed on the basis of your explicit choice to join; crash data on the basis of our legitimate interest in a working app. You may exercise your rights under Article 11 of the KVKK by contacting <a href="mailto:fourtypolesstudio@gmail.com" style="color:var(--accent2);">fourtypolesstudio@gmail.com</a>.</p>
+    <p><strong>KVKK (Türkiye).</strong> For users in Türkiye this section also serves as the clarification text (<em>aydınlatma metni</em>) under Law No. 6698 (KVKK). The data controller (<em>veri sorumlusu</em>) is <strong>Serhat Kızılkaya</strong>. Ranking data is processed on the basis of your explicit choice to join; crash data and anonymous usage counts on the basis of our legitimate interest in a working app. You may exercise your rights under Article 11 of the KVKK by contacting <a href="mailto:fourtypolesstudio@gmail.com" style="color:var(--accent2);">fourtypolesstudio@gmail.com</a>.</p>
   </div>
 
   <div class="policy-section">
@@ -161,7 +165,7 @@
 
     <div class="service-card">
       <div class="service-name">Google Firebase</div>
-      <div class="service-desc">Used in all apps for crash reporting (Crashlytics) and, in our games and DUEVO, for analytics and performance monitoring (Firebase Analytics, Performance). In DUEVO, also used for user authentication (Firebase Auth). In Katre, used only for crash reporting and, for the optional rankings, for anonymous and Google sign-in (Firebase Auth), ranking data and the Google backup of your counts (Cloud Firestore, Cloud Functions) and profile photos (Cloud Storage); Katre does not use Firebase Analytics.</div>
+      <div class="service-desc">Used in all apps for crash reporting (Crashlytics) and, in our games and DUEVO, for analytics and performance monitoring (Firebase Analytics, Performance). In DUEVO, also used for user authentication (Firebase Auth). In Katre, used for crash reporting, anonymous usage counts (Firebase Analytics, without the Advertising ID and with ad personalisation off) and, for the optional rankings, for anonymous and Google sign-in (Firebase Auth), ranking data and the Google backup of your counts (Cloud Firestore, Cloud Functions) and profile photos (Cloud Storage).</div>
       <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" class="service-link">Firebase Privacy Policy →</a>
     </div>
 
