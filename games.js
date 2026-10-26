@@ -6,6 +6,7 @@ const CATALOG = [
   { page: 'sgh.html',           name: 'Stickman: Going Home',          icon: 'sghLogo.png',        genre: 'Casual',  platforms: ['Android'] },
   { page: 'colorlaserpop.html', name: 'Color Laser Pop',               icon: 'colorlaserLogo.png', genre: 'Puzzle',  platforms: ['Android'] },
   { page: 'duevo.html',         name: 'DUEVO',                         icon: 'duevonewlogo.png',   genre: 'Finance', platforms: ['Android', 'iOS'], app: true },
+  { page: 'katre.html',         name: 'Katre – Dhikr Drops',           icon: 'katre_ikon_512.png', genre: 'Lifestyle', platforms: ['Android'], app: true },
 ];
 
 (() => {
