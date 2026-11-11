@@ -1126,6 +1126,40 @@ footer a:hover { color: var(--text); }
 
 .kd-link:hover { background: rgba(255,201,77,0.18); }
 
+.policy-tabs {
+  position: sticky;
+  top: calc(var(--nav-h) + 10px);
+  z-index: 5;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 5px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  background: rgba(18,16,30,0.85);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.policy-tabs button {
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.policy-tabs button:hover { color: var(--text); }
+.policy-tabs button.active { background: var(--accent); color: #fff; }
+
+.policy-section[hidden] { display: none; }
+
 /* ─── Support page ───────────────────────────────────────── */
 .page-header { margin-bottom: 32px; }
 .page-sub { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; }

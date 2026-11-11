@@ -37,8 +37,16 @@
     Sections marked <span style="color:var(--accent2);">★ DUEVO</span> apply only to the DUEVO app, and sections marked <span style="color:#ffc94d;">★ KATRE</span> apply only to the Katre app.
   </p>
 
+  <div class="policy-tabs" role="tablist" aria-label="Show policy for">
+    <button type="button" data-filter="all" class="active">All</button>
+    <button type="button" data-filter="games">Games</button>
+    <button type="button" data-filter="duevo">DUEVO</button>
+    <button type="button" data-filter="katre">Katre</button>
+  </div>
+
+
   <!-- GAMES SECTION -->
-  <div class="policy-section">
+  <div class="policy-section" data-app="games">
     <h2>1. Information We Collect — Games</h2>
     <p>Our games may collect the following data automatically through third-party services:</p>
     <ul>
@@ -51,7 +59,7 @@
   </div>
 
   <!-- DUEVO SECTION -->
-  <div class="policy-section">
+  <div class="policy-section" data-app="duevo">
     <h2>2. Information We Collect — <span style="color:var(--accent2);">★ DUEVO</span></h2>
     <p>DUEVO collects the following information to provide its accounting and finance features:</p>
 
@@ -75,7 +83,7 @@
     </ul>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="duevo">
     <h2>3. How We Use Your Information — <span style="color:var(--accent2);">★ DUEVO</span></h2>
     <ul>
       <li>To authenticate your identity and maintain your account</li>
@@ -87,7 +95,7 @@
   </div>
 
   <!-- KATRE SECTION -->
-  <div class="policy-section">
+  <div class="policy-section" data-app="katre">
     <h2>3a. Information We Collect — <span style="color:#ffc94d;">★ KATRE</span></h2>
     <p>Katre is a dhikr counter. It works fully offline and shows no ads. It does not use the Advertising ID and contains no advertising trackers; it only keeps anonymous usage counts (see “Automatically Collected”).</p>
 
@@ -154,13 +162,13 @@
     <p>The widget shows the verse of the day and lets you count dhikr. Its data is stored on your phone and shared only with the Katre app on the same phone.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="katre">
     <h2>3b. What Other Users Can See — <span style="color:#ffc94d;">★ KATRE</span></h2>
     <p>If you join the rankings, other Katre users can see your nickname, profile picture, chosen place, level, dhikr totals and counts in the rankings, your total for each dhikr and the vessels you have filled, your place in this week’s rankings, streak, the month you joined, and a Premium badge if you have Premium. Users can report an unsuitable nickname or photo. Reports are reviewed by our moderators; a profile reported by several people may be hidden automatically until it is reviewed. Who sent a report is never shown to the reported person or to other users.</p>
     <p>Totals for countries, provinces and districts are shown as combined sums and are not linked to any person.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="katre">
     <h2>3c. How We Use Your Information — <span style="color:#ffc94d;">★ KATRE</span></h2>
     <ul>
       <li>To show the rankings and the combined totals of countries, provinces and districts</li>
@@ -175,7 +183,7 @@
     <p>We do not sell your data, do not use it for advertising, and do not share it with anyone except the service providers listed below that run the app.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="katre">
     <h2>3d. Data Location, Retention &amp; Deletion — <span style="color:#ffc94d;">★ KATRE</span></h2>
     <p><strong>Where it is stored.</strong> Ranking data is stored in Google Firebase (Cloud Firestore and Cloud Functions) in Belgium (europe-west1). Profile photos are stored in Firebase Cloud Storage in the United States (us-east1). Crash reports are processed by Google. Data is encrypted in transit and at rest. By joining the rankings you consent to this transfer and processing outside Türkiye under Google’s safeguards.</p>
     <p><strong>How long.</strong> Your ranking profile is kept while you take part in the rankings, and your Google or Apple backup while your account exists. Crash reports are kept for up to 90 days by Firebase Crashlytics. Anonymous usage counts are kept for up to 14 months in Google Analytics. Reports and moderation records are kept only as long as needed to handle reports and prevent repeated abuse; a ban record is kept while the ban applies. Profiles deleted or banned by a moderator are kept hidden for up to 30 days, so that a mistaken decision can be undone, and are then deleted permanently.</p>
@@ -184,7 +192,7 @@
     <p><strong>KVKK (Türkiye).</strong> For users in Türkiye this section also serves as the clarification text (<em>aydınlatma metni</em>) under Law No. 6698 (KVKK). The data controller (<em>veri sorumlusu</em>) is <strong>Serhat Kızılkaya</strong>. Ranking data is processed on the basis of your explicit choice to join; crash data, the app integrity check and anonymous usage counts on the basis of our legitimate interest in a working app, and reports and moderation on the basis of our legitimate interest in a safe, respectful community. You may exercise your rights under Article 11 of the KVKK by contacting <a href="mailto:fourtypolesstudio@gmail.com" style="color:var(--accent2);">fourtypolesstudio@gmail.com</a>.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="common">
     <h2>4. Data Storage & Third-Party Services</h2>
 
     <div class="service-card">
@@ -218,18 +226,18 @@
     </div>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="common">
     <h2>5. In-App Purchases & Subscriptions</h2>
     <p>Some of our games and DUEVO offer optional in-app purchases or subscriptions. All transactions are processed securely through the Apple App Store or Google Play. We do not store payment card information on our own servers.</p>
     <p>For issues with purchases, contact us at <a href="mailto:fourtypolesstudio@gmail.com" style="color:var(--accent2);">fourtypolesstudio@gmail.com</a> or reach out to Apple / Google support directly.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="duevo">
     <h2>6. Biometric Authentication <span style="color:var(--accent2); font-size:0.85rem;">★ DUEVO</span></h2>
     <p>DUEVO may offer optional biometric authentication (fingerprint / Face ID) as a security feature. <strong>Biometric verification happens entirely on your device.</strong> We never collect, store, or transmit your fingerprint or face data. The app only receives a "verified / not verified" result from your device's operating system and never has access to the biometric data itself.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="common">
     <h2>7. Advertising</h2>
     <p>Some of our games display ads via Google AdMob, and some use the Meta (Facebook) SDK to measure our own ad campaigns on Instagram and Facebook. You can opt out of personalized advertising:</p>
     <ul>
@@ -241,12 +249,12 @@
     <p>Katre does not display any advertisements and does not use the Advertising ID.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="common">
     <h2>8. Data Retention</h2>
     <p>Analytics and crash data collected through Firebase is retained per Google's standard retention policies. For DUEVO, your account data stored in Supabase is retained as long as your account is active. Upon account deletion, your data is permanently removed within 30 days.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="duevo">
     <h2>9. Your Rights — Data Deletion <span style="color:var(--accent2); font-size:0.85rem;">★ DUEVO</span></h2>
     <p>In accordance with GDPR and applicable privacy laws, you have the right to:</p>
     <ul>
@@ -258,32 +266,32 @@
     <p>To request account deletion or a data export, contact us at <a href="mailto:fourtypolesstudio@gmail.com" style="color:var(--accent2);">fourtypolesstudio@gmail.com</a>. We will process your request within 30 days.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="duevo">
     <h2>9a. Backups <span style="color:var(--accent2); font-size:0.85rem;">★ DUEVO</span></h2>
     <p>To protect against data loss and ensure service continuity, we create encrypted backups of the database. Backups are stored securely, access-restricted, and kept only as long as necessary.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="duevo">
     <h2>9b. Data Location & International Transfer <span style="color:var(--accent2); font-size:0.85rem;">★ DUEVO</span></h2>
     <p>Your data is stored on secure cloud servers operated by Supabase (hosted on Amazon Web Services), which may be located outside your country, including outside Türkiye and the European Union. By using the app, you consent to the transfer and processing of your data in these locations under appropriate safeguards.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="duevo">
     <h2>9c. KVKK (Türkiye) <span style="color:var(--accent2); font-size:0.85rem;">★ DUEVO</span></h2>
     <p>For users in Türkiye, this policy also serves as the clarification text (<em>aydınlatma metni</em>) under Law No. 6698 (KVKK). The data controller (<em>veri sorumlusu</em>) is <strong>Serhat Kızılkaya</strong>. You may exercise your rights under Article 11 of the KVKK by contacting <a href="mailto:fourtypolesstudio@gmail.com" style="color:var(--accent2);">fourtypolesstudio@gmail.com</a>.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="common">
     <h2>10. Children's Privacy</h2>
     <p>Our apps are not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe your child has provided us with personal data, please contact us and we will delete it promptly.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="common">
     <h2>11. Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated date. Continued use of our apps after changes constitutes acceptance of the updated policy.</p>
   </div>
 
-  <div class="policy-section">
+  <div class="policy-section" data-app="common">
     <h2>12. Contact</h2>
     <p>For any questions about this Privacy Policy or your data, please contact us:</p>
     <a class="email-btn" href="mailto:fourtypolesstudio@gmail.com">
@@ -311,5 +319,26 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    var btns = document.querySelectorAll('.policy-tabs button');
+    function show(f) {
+      document.querySelectorAll('.policy-section[data-app]').forEach(function (s) {
+        var a = s.getAttribute('data-app');
+        s.hidden = !(f === 'all' || a === 'common' || a === f);
+      });
+      btns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-filter') === f); });
+    }
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-filter');
+        show(f);
+        history.replaceState(null, '', f === 'all' ? location.pathname : '#' + f);
+      });
+    });
+    var h = location.hash.slice(1);
+    if (['games', 'duevo', 'katre'].indexOf(h) > -1) show(h);
+  })();
+</script>
 </body>
 </html>
