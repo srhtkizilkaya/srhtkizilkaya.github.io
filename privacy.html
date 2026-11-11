@@ -97,7 +97,7 @@
   <!-- KATRE SECTION -->
   <div class="policy-section" data-app="katre">
     <h2>3a. Information We Collect — <span style="color:#ffc94d;">★ KATRE</span></h2>
-    <p>Katre is a dhikr counter. It works fully offline and shows no ads. It does not use the Advertising ID and contains no advertising trackers; it only keeps anonymous usage counts (see “Automatically Collected”).</p>
+    <p>Katre is a dhikr counter with prayer times and the Qur'an. Counting works fully offline (only Qur'an translations and recitations need the internet), and the app shows no ads. It does not use the Advertising ID and contains no advertising trackers; it only keeps anonymous usage counts (see “Automatically Collected”).</p>
 
     <p><strong>Kept only on your device</strong></p>
     <ul>
@@ -105,20 +105,23 @@
       <li>Your settings (theme, language, sound and vibration)</li>
       <li>Your Premium status and, if you chose one, your profile photo</li>
       <li>The name you give your profile (it leaves your phone only if you join the rankings, where it becomes your nickname)</li>
+      <li>The dhikr you create yourself (“your own dhikr”): their names and water colours</li>
+      <li>Your prayer-time place and reminders, your Qur'an settings, bookmarks and last reading place</li>
     </ul>
     <p>This data never leaves your phone unless you join the optional rankings or keep your profile with Google or Apple. Uninstalling the app or clearing its data deletes it from the phone.</p>
 
     <p><strong>Backup with your Google or Apple account (only if you connect one)</strong></p>
     <ul>
       <li>Your dhikr counts (each dhikr’s total and daily counts), your daily goal and your water colours, so they come back on a new phone or after reinstalling. This backup is private: only you can read it, and it is never shown to other users or used for the rankings.</li>
+      <li>If you created your own dhikr: their names, water colours and counts. The names of your own dhikr are stored only in this private backup and never anywhere else on our servers.</li>
     </ul>
 
     <p><strong>Optional rankings (only if you choose to join)</strong></p>
     <ul>
       <li>A nickname you choose (your real name is never asked for)</li>
       <li>A profile picture: an ornament motif, or a photo you pick from your gallery (resized to a small 192×192 image)</li>
-      <li>The place you choose from a list: country, and in Türkiye your province and, optionally, district. We never use GPS or your device location.</li>
-      <li>Your dhikr totals (overall and for each dhikr), the number of dhikr counted in each period (day, week, month), your streak, the date you joined, and whether you have Premium</li>
+      <li>The place you choose from a list: country, and in Türkiye your province and, optionally, district. Your device location is never used for the rankings.</li>
+      <li>Your dhikr totals (overall and for each dhikr), the number of dhikr counted in each period (day, week, month), your streak, the date you joined, and whether you have Premium. Counts of your own dhikr are included and are sent under a random code only; their names never leave your phone (except in your private backup above).</li>
       <li>Technical records used to keep rankings fair: when each batch of counts was sent and how many were counted in that time</li>
     </ul>
 
@@ -142,6 +145,7 @@
       <li>Crash reports (via Firebase Crashlytics): the error, device model, operating system and app version, and a random installation ID. Crash reports contain no dhikr counts or profile data.</li>
       <li>Anonymous usage counts (via Google Analytics for Firebase): that the app was opened and for how long, the app version, device model, operating system, language and approximate country (from the IP address, which is not stored), linked to a random app-instance ID. Only the automatic events are used; nothing about your dhikr, your profile or your name. The Advertising ID is not collected, and ad storage and ad personalisation are switched off.</li>
       <li>App integrity check (Firebase App Check with Google Play Integrity on Android and Apple App Attest on iPhone): before talking to our servers, the app asks Google or Apple to confirm that it is the genuine Katre app on a genuine device. Only a pass or fail result is used; it contains no personal data.</li>
+      <li>Text updates (via Firebase Remote Config): the app downloads updated texts and the dates of special days. This uses a random installation ID; nothing about you or your dhikr is sent.</li>
       <li>Premium purchases: subscriptions are bought and managed in Google Play (or the App Store). We never receive your payment details; the store only tells the app whether your subscription is active.</li>
     </ul>
 
@@ -149,22 +153,25 @@
     <ul>
       <li>Photo gallery: only when you tap “Choose a photo from my phone”, and only the photo you pick</li>
       <li>Ringer mode: read so that drop sounds stay silent when your phone is on silent</li>
-      <li>Location: approximate device location, used on the device only, with your permission</li>
+      <li>Location (only if you allow it): approximate, not precise, location, used on your phone only for prayer times and the Qibla, and never sent anywhere (see below)</li>
+      <li>Notifications and, on Android, “Alarms &amp; reminders”: to show your dhikr and prayer-time reminders on time; they are scheduled on your phone</li>
+      <li>Motion and compass sensors: only while the Qibla screen is open</li>
+      <li>Background audio: so a Qur'an recitation keeps playing when the screen is off</li>
     </ul>
 
     <p><strong>Prayer times and Qibla</strong></p>
     <p>To show prayer times and the Qibla direction for where you are, Katre can use your device's approximate location, only if you allow it. The location is used on your phone to calculate the times and the direction; it is never sent to our servers or to anyone else. You can instead pick a place from a list, and you can turn location access off at any time in your phone's settings. The Qibla compass uses your phone's motion/magnetic sensors only while the Qibla screen is open. Prayer-time reminders are scheduled on your phone as local notifications.</p>
 
     <p><strong>Qur'an</strong></p>
-    <p>The Arabic text of the Qur'an is included in the app (Tanzil Quran Text, CC BY 3.0). Translations and recitations are provided by the Quran Foundation. When you open a translation or play a recitation, the app asks our server (Google Firebase Cloud Functions, EU region) for it; the request contains only which translation, recitation and surah is needed, plus a Firebase App Check token that proves the request comes from the genuine app. No account or personal data is sent. Audio files are downloaded from the Quran Foundation's audio servers, which, like any web server, see your device's IP address. Translations and audio may be kept on your phone for up to one week so they play without re-downloading; your bookmarks and last reading place stay on your phone.</p>
+    <p>The Arabic text of the Qur'an is included in the app (Tanzil Quran Text, CC BY 3.0). Translations and recitations are provided by the Quran Foundation. When you open a translation or play a recitation, the app asks our server (Google Firebase Cloud Functions, EU region) for it; the request contains only which translation, recitation and surah is needed, plus a Firebase App Check token that proves the request comes from the genuine app. No account or personal data is sent. Audio files are downloaded from the Quran Foundation's audio servers (verses.quran.com), which, like any web server, see your device's IP address. Translations and audio may be kept on your phone for up to one week so they play without re-downloading; your bookmarks and last reading place stay on your phone.</p>
 
     <p><strong>Home-screen widget</strong></p>
-    <p>The widget shows the verse of the day and lets you count dhikr. Its data is stored on your phone and shared only with the Katre app on the same phone.</p>
+    <p>The widget shows the verse of the day and lets you count dhikr. Its data is stored on your phone and shared only with the Katre app on the same phone; dhikr counted on the widget are treated like dhikr counted in the app.</p>
   </div>
 
   <div class="policy-section" data-app="katre">
     <h2>3b. What Other Users Can See — <span style="color:#ffc94d;">★ KATRE</span></h2>
-    <p>If you join the rankings, other Katre users can see your nickname, profile picture, chosen place, level, dhikr totals and counts in the rankings, your total for each dhikr and the vessels you have filled, your place in this week’s rankings, streak, the month you joined, and a Premium badge if you have Premium. Users can report an unsuitable nickname or photo. Reports are reviewed by our moderators; a profile reported by several people may be hidden automatically until it is reviewed. Who sent a report is never shown to the reported person or to other users.</p>
+    <p>If you join the rankings, other Katre users can see your nickname, profile picture, chosen place, level, dhikr totals and counts in the rankings, your total for each dhikr and the vessels you have filled, your place in this week’s rankings, streak, the month you joined, and a Premium badge if you have Premium. Your own dhikr count toward these totals, but their names are never shown. Users can report an unsuitable nickname or photo. Reports are reviewed by our moderators; a profile reported by several people may be hidden automatically until it is reviewed. Who sent a report is never shown to the reported person or to other users.</p>
     <p>Totals for countries, provinces and districts are shown as combined sums and are not linked to any person.</p>
   </div>
 
@@ -179,6 +186,7 @@
       <li>To turn Premium on while your subscription is active</li>
       <li>To review reports, keep the rankings free of offensive names and photos, and prevent misuse of reports and banned accounts rejoining</li>
       <li>To protect our servers from fake requests (app integrity check)</li>
+      <li>To deliver Qur'an translations and recitations</li>
     </ul>
     <p>We do not sell your data, do not use it for advertising, and do not share it with anyone except the service providers listed below that run the app.</p>
   </div>
@@ -197,8 +205,14 @@
 
     <div class="service-card">
       <div class="service-name">Google Firebase</div>
-      <div class="service-desc">Used in all apps for crash reporting (Crashlytics) and, in our games and DUEVO, for analytics and performance monitoring (Firebase Analytics, Performance). In DUEVO, also used for user authentication (Firebase Auth). In Katre, used for crash reporting, anonymous usage counts (Firebase Analytics, without the Advertising ID and with ad personalisation off) and, for the optional rankings, for anonymous, Google and Apple sign-in (Firebase Auth), ranking data, reports and moderation records and the backup of your counts (Cloud Firestore, Cloud Functions), the app integrity check (App Check) and profile photos (Cloud Storage).</div>
+      <div class="service-desc">Used in all apps for crash reporting (Crashlytics) and, in our games and DUEVO, for analytics and performance monitoring (Firebase Analytics, Performance). In DUEVO, also used for user authentication (Firebase Auth). In Katre, used for crash reporting, anonymous usage counts (Firebase Analytics, without the Advertising ID and with ad personalisation off) and, for the optional rankings, for anonymous, Google and Apple sign-in (Firebase Auth), ranking data, reports and moderation records and the backup of your counts (Cloud Firestore, Cloud Functions), the app integrity check (App Check) and profile photos (Cloud Storage); also for text updates (Remote Config) and for passing Qur'an translations and recitations from the Quran Foundation to the app (Cloud Functions).</div>
       <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" class="service-link">Firebase Privacy Policy →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-name">Quran Foundation <span style="color:#ffc94d; font-size:0.75rem;">★ KATRE</span></div>
+      <div class="service-desc">Provides the Qur'an translations and recitations in Katre. Our server asks for them without any personal data; recitation audio is downloaded straight from the Quran Foundation's audio servers, which see your device's IP address.</div>
+      <a href="https://quran.foundation" target="_blank" rel="noopener" class="service-link">Quran Foundation →</a>
     </div>
 
     <div class="service-card">
@@ -298,6 +312,7 @@
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
       fourtypolesstudio@gmail.com
     </a>
+    <p>For Katre: <a href="mailto:katreapp@gmail.com" style="color:var(--accent2);">katreapp@gmail.com</a></p>
   </div>
 </div>
 
